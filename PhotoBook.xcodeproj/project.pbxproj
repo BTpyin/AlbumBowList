@@ -13,6 +13,7 @@
 		0ECE2655267F491200080EA8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ECE2653267F491200080EA8 /* Main.storyboard */; };
 		0ECE2657267F491300080EA8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0ECE2656267F491300080EA8 /* Assets.xcassets */; };
 		0ECE265A267F491300080EA8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0ECE2658267F491300080EA8 /* LaunchScreen.storyboard */; };
+		284D18C03838B2C51F4347C5 /* Pods_PhotoBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B179B87F82A23EF8BDF604 /* Pods_PhotoBook.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,9 @@
 		0ECE2656267F491300080EA8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0ECE2659267F491300080EA8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0ECE265B267F491300080EA8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		35F68161B674F195DA600913 /* Pods-PhotoBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoBook.release.xcconfig"; path = "Target Support Files/Pods-PhotoBook/Pods-PhotoBook.release.xcconfig"; sourceTree = "<group>"; };
+		38B179B87F82A23EF8BDF604 /* Pods_PhotoBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		ACA260C55E8947A94AAFA276 /* Pods-PhotoBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoBook.debug.xcconfig"; path = "Target Support Files/Pods-PhotoBook/Pods-PhotoBook.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +35,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				284D18C03838B2C51F4347C5 /* Pods_PhotoBook.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -42,6 +47,8 @@
 			children = (
 				0ECE264C267F491200080EA8 /* PhotoBook */,
 				0ECE264B267F491200080EA8 /* Products */,
+				B2825B10D0D0A371A28A1DDE /* Pods */,
+				37F5DB4B2937C369B40FC9C7 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,6 +74,24 @@
 			path = PhotoBook;
 			sourceTree = "<group>";
 		};
+		37F5DB4B2937C369B40FC9C7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				38B179B87F82A23EF8BDF604 /* Pods_PhotoBook.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B2825B10D0D0A371A28A1DDE /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				ACA260C55E8947A94AAFA276 /* Pods-PhotoBook.debug.xcconfig */,
+				35F68161B674F195DA600913 /* Pods-PhotoBook.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -74,9 +99,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 0ECE265E267F491300080EA8 /* Build configuration list for PBXNativeTarget "PhotoBook" */;
 			buildPhases = (
+				31FBB5F13FC2BD4C5343E8D3 /* [CP] Check Pods Manifest.lock */,
 				0ECE2646267F491200080EA8 /* Sources */,
 				0ECE2647267F491200080EA8 /* Frameworks */,
 				0ECE2648267F491200080EA8 /* Resources */,
+				FA7C50D89965E362F50D390C /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -131,6 +158,48 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		31FBB5F13FC2BD4C5343E8D3 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-PhotoBook-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FA7C50D89965E362F50D390C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotoBook/Pods-PhotoBook-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-PhotoBook/Pods-PhotoBook-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-PhotoBook/Pods-PhotoBook-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		0ECE2646267F491200080EA8 /* Sources */ = {
@@ -283,6 +352,7 @@
 		};
 		0ECE265F267F491300080EA8 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = ACA260C55E8947A94AAFA276 /* Pods-PhotoBook.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -302,6 +372,7 @@
 		};
 		0ECE2660267F491300080EA8 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 35F68161B674F195DA600913 /* Pods-PhotoBook.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
