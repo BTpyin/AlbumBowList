@@ -17,5 +17,7 @@ class ResultPayload:  Mappable {
     }
 
     func mapping(map: Map) {
+        resultCount <- map["resultCount"]
+        results <- map["results"]
     }
 }
