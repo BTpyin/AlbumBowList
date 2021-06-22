@@ -31,13 +31,16 @@ class PhotoListTableViewCell: UITableViewCell {
 
     
     func initUI(){
+        self.selectionStyle = .none
         photoImageView.clipsToBounds = true
+        photoImageView.contentMode = .scaleAspectFill
+        photoImageView.roundCorners(cornerRadius: 7)
         cellContentView.layer.applySketchShadow(
             color: .black,
                 alpha: 0.5,
-                x: 1,
-                y: 1,
-                blur: 4,
+                x: 0,
+                y: 0,
+                blur: 6,
                 spread: 0)
         
     }

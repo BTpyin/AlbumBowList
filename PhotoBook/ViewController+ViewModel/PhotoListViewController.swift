@@ -37,6 +37,15 @@ class PhotoListViewController: BaseViewController, UITableViewDelegate, UITableV
         }).disposed(by: disposeBag)
     }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        tableView.deselectRow(at: indexPath, animated: true)
+        let photo = viewModel.output.photosRelay.value[indexPath.row]
+        if let albumDetailViewController = storyboard?.instantiateViewController(withIdentifier: "AlbumDetailViewController") as? AlbumDetailViewController{
+            albumDetailViewController.viewModel.input.photoRelay.accept(photo)
+            self.navigationController?.pushViewController(albumDetailViewController, animated: true)
+        }
+    }
+    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.output.photosRelay.value.count ?? 0
     }

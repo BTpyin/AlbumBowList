@@ -27,6 +27,8 @@
 		0ECE26712680D04700080EA8 /* ResultPayLoad.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE26702680D04700080EA8 /* ResultPayLoad.swift */; };
 		0ECE26732680D14C00080EA8 /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE26722680D14C00080EA8 /* Photo.swift */; };
 		0ECE26752680D7FA00080EA8 /* DataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE26742680D7FA00080EA8 /* DataManager.swift */; };
+		0ECE267B26822AC700080EA8 /* AlbumDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE267A26822AC700080EA8 /* AlbumDetailViewController.swift */; };
+		0ECE267D2682388200080EA8 /* AlbumDetailViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE267C2682388200080EA8 /* AlbumDetailViewModel.swift */; };
 		284D18C03838B2C51F4347C5 /* Pods_PhotoBook.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 38B179B87F82A23EF8BDF604 /* Pods_PhotoBook.framework */; };
 /* End PBXBuildFile section */
 
@@ -53,6 +55,8 @@
 		0ECE26702680D04700080EA8 /* ResultPayLoad.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultPayLoad.swift; sourceTree = "<group>"; };
 		0ECE26722680D14C00080EA8 /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
 		0ECE26742680D7FA00080EA8 /* DataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataManager.swift; sourceTree = "<group>"; };
+		0ECE267A26822AC700080EA8 /* AlbumDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewController.swift; sourceTree = "<group>"; };
+		0ECE267C2682388200080EA8 /* AlbumDetailViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumDetailViewModel.swift; sourceTree = "<group>"; };
 		35F68161B674F195DA600913 /* Pods-PhotoBook.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoBook.release.xcconfig"; path = "Target Support Files/Pods-PhotoBook/Pods-PhotoBook.release.xcconfig"; sourceTree = "<group>"; };
 		38B179B87F82A23EF8BDF604 /* Pods_PhotoBook.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_PhotoBook.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		ACA260C55E8947A94AAFA276 /* Pods-PhotoBook.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoBook.debug.xcconfig"; path = "Target Support Files/Pods-PhotoBook/Pods-PhotoBook.debug.xcconfig"; sourceTree = "<group>"; };
@@ -132,6 +136,8 @@
 				0E4B16142681C42F0056DECC /* PhotoListTableViewCellViewModel.swift */,
 				0E4B16172681C54B0056DECC /* ViewModelType.swift */,
 				0E4B161A2681D2D50056DECC /* RootNavigationController.swift */,
+				0ECE267A26822AC700080EA8 /* AlbumDetailViewController.swift */,
+				0ECE267C2682388200080EA8 /* AlbumDetailViewModel.swift */,
 			);
 			path = "ViewController+ViewModel";
 			sourceTree = "<group>";
@@ -307,10 +313,12 @@
 				0ECE26732680D14C00080EA8 /* Photo.swift in Sources */,
 				0E4B16182681C54B0056DECC /* ViewModelType.swift in Sources */,
 				0ECE2669267F4CB500080EA8 /* UIViewShadowExtension.swift in Sources */,
+				0ECE267D2682388200080EA8 /* AlbumDetailViewModel.swift in Sources */,
 				0ECE266F267F4D9500080EA8 /* UIColorInitExtension.swift in Sources */,
 				0ECE2650267F491200080EA8 /* SceneDelegate.swift in Sources */,
 				0E4B160726818E910056DECC /* PhotoListViewController.swift in Sources */,
 				0ECE266B267F4CDB00080EA8 /* UIViewRoundCornerExtension.swift in Sources */,
+				0ECE267B26822AC700080EA8 /* AlbumDetailViewController.swift in Sources */,
 				0ECE26712680D04700080EA8 /* ResultPayLoad.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
