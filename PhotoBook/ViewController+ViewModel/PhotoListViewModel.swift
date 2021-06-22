@@ -10,7 +10,10 @@ import ObjectMapper
 import RxSwift
 import RxCocoa
 
-class PhotoListViewModel{
+class PhotoListViewModel : ViewModelType{
+    
+    var disposeBag = DisposeBag()
+
     var data = ""
     struct Input {
         

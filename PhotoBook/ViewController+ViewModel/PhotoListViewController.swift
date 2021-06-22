@@ -24,8 +24,11 @@ class PhotoListViewController: BaseViewController, UITableViewDelegate, UITableV
     }
     
     func initUI(){
-        self.navigationItem.title = "PhotoBook"
+        self.navigationItem.title = "AlbumList"
         self.navigationItem.hidesBackButton = true
+        tableView.backgroundColor = .white
+        tableView.allowsMultipleSelection = false
+        tableView.clipsToBounds = false
     }
     
     func setBinding(){

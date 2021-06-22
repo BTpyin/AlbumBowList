@@ -13,7 +13,7 @@ import RxCocoa
 
 extension PhotoListTableViewCell{
     
-    class PhotoListTableViewCellViewModel{
+    class PhotoListTableViewCellViewModel: ViewModelType{
         let disposeBag = DisposeBag()
         
         struct Input {
