@@ -14,6 +14,7 @@
 		0E4B16152681C42F0056DECC /* PhotoListTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B16142681C42F0056DECC /* PhotoListTableViewCellViewModel.swift */; };
 		0E4B16182681C54B0056DECC /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B16172681C54B0056DECC /* ViewModelType.swift */; };
 		0E4B161B2681D2D50056DECC /* RootNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B161A2681D2D50056DECC /* RootNavigationController.swift */; };
+		0E4B164A268319F20056DECC /* BaseWebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B1649268319F20056DECC /* BaseWebViewController.swift */; };
 		0ECE264E267F491200080EA8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE264D267F491200080EA8 /* AppDelegate.swift */; };
 		0ECE2650267F491200080EA8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE264F267F491200080EA8 /* SceneDelegate.swift */; };
 		0ECE2652267F491200080EA8 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0ECE2651267F491200080EA8 /* BaseViewController.swift */; };
@@ -40,6 +41,7 @@
 		0E4B16142681C42F0056DECC /* PhotoListTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		0E4B16172681C54B0056DECC /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
 		0E4B161A2681D2D50056DECC /* RootNavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RootNavigationController.swift; sourceTree = "<group>"; };
+		0E4B1649268319F20056DECC /* BaseWebViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseWebViewController.swift; sourceTree = "<group>"; };
 		0ECE264A267F491200080EA8 /* PhotoBook.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PhotoBook.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0ECE264D267F491200080EA8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0ECE264F267F491200080EA8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -138,6 +140,7 @@
 				0E4B161A2681D2D50056DECC /* RootNavigationController.swift */,
 				0ECE267A26822AC700080EA8 /* AlbumDetailViewController.swift */,
 				0ECE267C2682388200080EA8 /* AlbumDetailViewModel.swift */,
+				0E4B1649268319F20056DECC /* BaseWebViewController.swift */,
 			);
 			path = "ViewController+ViewModel";
 			sourceTree = "<group>";
@@ -320,6 +323,7 @@
 				0ECE266B267F4CDB00080EA8 /* UIViewRoundCornerExtension.swift in Sources */,
 				0ECE267B26822AC700080EA8 /* AlbumDetailViewController.swift in Sources */,
 				0ECE26712680D04700080EA8 /* ResultPayLoad.swift in Sources */,
+				0E4B164A268319F20056DECC /* BaseWebViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
