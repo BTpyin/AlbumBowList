@@ -32,31 +32,31 @@ class AlbumListViewController: BaseViewController, UITableViewDelegate, UITableV
     }
     
     func setBinding(){
-        viewModel.output.photosRelay.subscribe(onNext:{ _ in
+        viewModel.output.albumsRelay.subscribe(onNext:{ _ in
             self.tableView.reloadData()
         }).disposed(by: disposeBag)
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        let photo = viewModel.output.photosRelay.value[indexPath.row]
+        let album = viewModel.output.albumsRelay.value[indexPath.row]
         if let albumDetailViewController = storyboard?.instantiateViewController(withIdentifier: "AlbumDetailViewController") as? AlbumDetailViewController{
-            albumDetailViewController.viewModel.input.photoRelay.accept(photo)
+            albumDetailViewController.viewModel.input.albumRelay.accept(album)
             self.navigationController?.pushViewController(albumDetailViewController, animated: true)
         }
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.output.photosRelay.value.count ?? 0
+        return viewModel.output.albumsRelay.value.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cellIdentifier = "PhotoListTableViewCell"
-        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? PhotoListTableViewCell else {
+        let cellIdentifier = "AlbumListTableViewCell"
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as? AlbumListTableViewCell else {
           fatalError("The dequeued cell is not an instance of PhotoListTableViewCell.")
         }
-        let photo = viewModel.output.photosRelay.value[indexPath.row]
-        cell.viewModel.input.photoRelay.accept(photo)
+        let album = viewModel.output.albumsRelay.value[indexPath.row]
+        cell.viewModel.input.albumRelay.accept(album)
         return cell
     }
 

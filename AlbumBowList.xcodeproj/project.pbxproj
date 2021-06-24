@@ -9,7 +9,7 @@
 /* Begin PBXBuildFile section */
 		0E4B160726818E910056DECC /* AlbumListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B160626818E910056DECC /* AlbumListViewController.swift */; };
 		0E4B160A26818EB30056DECC /* PhotoListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B160926818EB30056DECC /* PhotoListViewModel.swift */; };
-		0E4B160D268195A30056DECC /* PhotoListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B160C268195A30056DECC /* PhotoListTableViewCell.swift */; };
+		0E4B160D268195A30056DECC /* AlbumListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B160C268195A30056DECC /* AlbumListTableViewCell.swift */; };
 		0E4B16112681A0B40056DECC /* 1.txt in Resources */ = {isa = PBXBuildFile; fileRef = 0E4B16102681A0B40056DECC /* 1.txt */; };
 		0E4B16152681C42F0056DECC /* PhotoListTableViewCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B16142681C42F0056DECC /* PhotoListTableViewCellViewModel.swift */; };
 		0E4B16182681C54B0056DECC /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E4B16172681C54B0056DECC /* ViewModelType.swift */; };
@@ -35,7 +35,7 @@
 /* Begin PBXFileReference section */
 		0E4B160626818E910056DECC /* AlbumListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListViewController.swift; sourceTree = "<group>"; };
 		0E4B160926818EB30056DECC /* PhotoListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListViewModel.swift; sourceTree = "<group>"; };
-		0E4B160C268195A30056DECC /* PhotoListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListTableViewCell.swift; sourceTree = "<group>"; };
+		0E4B160C268195A30056DECC /* AlbumListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlbumListTableViewCell.swift; sourceTree = "<group>"; };
 		0E4B16102681A0B40056DECC /* 1.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = 1.txt; sourceTree = "<group>"; };
 		0E4B16142681C42F0056DECC /* PhotoListTableViewCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoListTableViewCellViewModel.swift; sourceTree = "<group>"; };
 		0E4B16172681C54B0056DECC /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
@@ -77,7 +77,7 @@
 		0E4B15FD26818BC70056DECC /* View */ = {
 			isa = PBXGroup;
 			children = (
-				0E4B160C268195A30056DECC /* PhotoListTableViewCell.swift */,
+				0E4B160C268195A30056DECC /* AlbumListTableViewCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -302,7 +302,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0E4B160D268195A30056DECC /* PhotoListTableViewCell.swift in Sources */,
+				0E4B160D268195A30056DECC /* AlbumListTableViewCell.swift in Sources */,
 				0E4B161B2681D2D50056DECC /* RootNavigationController.swift in Sources */,
 				0ECE2652267F491200080EA8 /* BaseViewController.swift in Sources */,
 				0E4B160A26818EB30056DECC /* PhotoListViewModel.swift in Sources */,

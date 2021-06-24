@@ -14,7 +14,7 @@ class AlbumDetailViewModel: ViewModelType{
     var disposeBag = DisposeBag()
 
     struct Input {
-        let photoRelay = BehaviorRelay<Album?>(value: nil)
+        let albumRelay = BehaviorRelay<Album?>(value: nil)
         let showCollectionDidSelectedRelay = PublishRelay<Void>()
         let showArtistDidSelectedRelay = PublishRelay<Void>()
     }
@@ -44,23 +44,23 @@ class AlbumDetailViewModel: ViewModelType{
     
     init() {
         
-        input.photoRelay.map { $0?.artworkUrl100 }
+        input.albumRelay.map { $0?.artworkUrl100 }
             .bind(to: output.imageURLRelay)
             .disposed(by: disposeBag)
         
-        input.photoRelay.map { $0?.artistName }
+        input.albumRelay.map { $0?.artistName }
             .bind(to: output.artistNameRelay)
             .disposed(by: disposeBag)
         
-        input.photoRelay.map { $0?.collectionName }
+        input.albumRelay.map { $0?.collectionName }
             .bind(to: output.collectionNameRelay)
             .disposed(by: disposeBag)
         
-        input.photoRelay.map { $0?.copyright }
+        input.albumRelay.map { $0?.copyright }
             .bind(to: output.cpyRightTextRelay)
             .disposed(by: disposeBag)
         
-        input.photoRelay.map {
+        input.albumRelay.map {
             let dateFormatter = DateFormatter()
             dateFormatter.dateFormat = "yyyy-MM-dd"
             return dateFormatter.string(from: $0?.releaseDate ?? Date())
@@ -68,27 +68,27 @@ class AlbumDetailViewModel: ViewModelType{
             .bind(to: output.dateRelay)
             .disposed(by: disposeBag)
         
-        input.photoRelay.map { $0?.primaryGenreName }
+        input.albumRelay.map { $0?.primaryGenreName }
             .bind(to: output.genreRelay)
             .disposed(by: disposeBag)
         
-        input.photoRelay.map { $0?.trackCount }
+        input.albumRelay.map { $0?.trackCount }
             .bind(to: output.trackCountRelay)
             .disposed(by: disposeBag)
         
-        input.photoRelay.map { $0?.country }
+        input.albumRelay.map { $0?.country }
             .bind(to: output.countryRelay)
             .disposed(by: disposeBag)
         
-        input.photoRelay.map { $0?.collectionPrice }
+        input.albumRelay.map { $0?.collectionPrice }
             .bind(to: output.priceRelay)
             .disposed(by: disposeBag)
         
-        input.photoRelay.map { $0?.artistViewUrl }
+        input.albumRelay.map { $0?.artistViewUrl }
             .bind(to: output.artistUrlRelay)
             .disposed(by: disposeBag)
         
-        input.photoRelay.map { $0?.collectionViewUrl }
+        input.albumRelay.map { $0?.collectionViewUrl }
             .bind(to: output.collectionUrlRelay)
             .disposed(by: disposeBag)
         

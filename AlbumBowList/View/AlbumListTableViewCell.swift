@@ -10,12 +10,12 @@ import RxCocoa
 import RxSwift
 import Kingfisher
 
-class PhotoListTableViewCell: UITableViewCell {
+class AlbumListTableViewCell: UITableViewCell {
 
     @IBOutlet weak var cellContentView: UIView!
     @IBOutlet weak var collectionNameLabel: UILabel!
     @IBOutlet weak var artistNameLabel: UILabel!
-    @IBOutlet weak var photoImageView: UIImageView!
+    @IBOutlet weak var albumImageView: UIImageView!
     @IBOutlet weak var copyrightLabel: UILabel!
     
     let disposeBag = DisposeBag()
@@ -32,9 +32,9 @@ class PhotoListTableViewCell: UITableViewCell {
     
     func initUI(){
         self.selectionStyle = .none
-        photoImageView.clipsToBounds = true
-        photoImageView.contentMode = .scaleAspectFill
-        photoImageView.roundCorners(cornerRadius: 7)
+        albumImageView.clipsToBounds = true
+        albumImageView.contentMode = .scaleAspectFill
+        albumImageView.roundCorners(cornerRadius: 7)
         cellContentView.layer.applySketchShadow(
             color: .black,
                 alpha: 0.5,
@@ -49,7 +49,7 @@ class PhotoListTableViewCell: UITableViewCell {
         
         viewModel.output.imageURLRelay
             .subscribe(onNext: { [weak self] urlString in
-                self?.photoImageView.kf.setImage(with: URL(string: urlString ?? ""))
+                self?.albumImageView.kf.setImage(with: URL(string: urlString ?? ""))
             }).disposed(by: disposeBag)
         
         viewModel.output.artistNameRelay

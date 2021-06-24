@@ -20,7 +20,7 @@ class PhotoListViewModel : ViewModelType{
     }
     
     struct Output {
-        let photosRelay = BehaviorRelay<[Album?]>(value:[])
+        let albumsRelay = BehaviorRelay<[Album?]>(value:[])
     }
     
     struct InOut {
@@ -41,6 +41,6 @@ class PhotoListViewModel : ViewModelType{
         }
 //        guard let json = try? JSON(parseJSON: data) else {return}
         let response = Mapper<ResultPayload>().map(JSONString:data)
-        output.photosRelay.accept(response?.results ?? [])
+        output.albumsRelay.accept(response?.results ?? [])
     }
 }

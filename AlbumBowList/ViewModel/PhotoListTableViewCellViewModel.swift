@@ -11,13 +11,13 @@ import RxSwift
 import RxCocoa
 
 
-extension PhotoListTableViewCell{
+extension AlbumListTableViewCell{
     
     class PhotoListTableViewCellViewModel: ViewModelType{
         let disposeBag = DisposeBag()
         
         struct Input {
-            let photoRelay = BehaviorRelay<Album?>(value: nil)
+            let albumRelay = BehaviorRelay<Album?>(value: nil)
             let bookmarkDidSelectedRelay = PublishRelay<Void>()
         }
         
@@ -38,19 +38,19 @@ extension PhotoListTableViewCell{
         
         init() {
             
-            input.photoRelay.map { $0?.artworkUrl100 }
+            input.albumRelay.map { $0?.artworkUrl100 }
                 .bind(to: output.imageURLRelay)
                 .disposed(by: disposeBag)
             
-            input.photoRelay.map { $0?.artistName }
+            input.albumRelay.map { $0?.artistName }
                 .bind(to: output.artistNameRelay)
                 .disposed(by: disposeBag)
             
-            input.photoRelay.map { $0?.collectionName }
+            input.albumRelay.map { $0?.collectionName }
                 .bind(to: output.collectionNameRelay)
                 .disposed(by: disposeBag)
             
-            input.photoRelay.map { $0?.copyright }
+            input.albumRelay.map { $0?.copyright }
                 .bind(to: output.cpyRightTextRelay)
                 .disposed(by: disposeBag)
             
