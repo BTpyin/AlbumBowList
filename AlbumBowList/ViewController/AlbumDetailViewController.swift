@@ -39,8 +39,10 @@ class AlbumDetailViewController: BaseViewController {
     
     
     func initUI(){
-        albumCardView.roundCorners(.allCorners, radius: 25)
-        albumTopView.roundCorners([.topLeft, .topRight], radius: 25)
+        
+        albumTopView.roundCorners(cornerRadius: 25)
+//        albumCardView.roundCorners(.allCorners, radius: 25)
+        albumCardView.roundCorners(cornerRadius: 25)
 //        albumTopView.backgroundColor = UIColor.init(red: 196, green: 219, blue: 255)
         albumImageView.clipsToBounds = true
         albumImageView.contentMode = .scaleAspectFill
@@ -48,8 +50,8 @@ class AlbumDetailViewController: BaseViewController {
         albumCardView.layer.applySketchShadow(
             color: .black,
                 alpha: 0.5,
-            x: -0.3,
-            y: 0,
+            x: 0,
+            y: 0.5,
                 blur: 7,
             spread: 0)
         
